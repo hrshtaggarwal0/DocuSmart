@@ -1,0 +1,105 @@
+/* Existing theme_light.css content */
+body, .stApp {
+    background-color: #FFFFFF !important;
+    color: #262730 !important;
+}
+.stTextInput input,
+.stTextInput textarea {
+    background: #FFFFFF !important;
+    color: #262730 !important;
+}
+.stSidebar {
+    background: #F0F2F6 !important;
+}
+.stMarkdown, .stSubheader, .stHeader, .stTitle, .stSidebar .css-1d391kg, .stSidebar .css-1v3fvcr, label, .stSidebar label {
+    color: #262730 !important;
+}
+
+.se-purple-info {
+    color: #6C2EB8 !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 1em 0;
+}
+
+body, .stApp {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.haaz-green {
+    color: #00FFC8 !important;  /* Siemens Energy Green */
+    font-weight: 800;
+}
+.haaz-purple {
+    color: #6C2EB8 !important;  /* Siemens Energy Purple */
+    font-weight: 800;
+}
+
+button {
+    background-color: #6C2EB8 !important;
+    color: #fff !important;
+    border: none !important;
+    font-weight: 600;
+}
+button:hover {
+    background-color: #4B1D7A !important;
+    color: #fff !important;
+}
+
+/* NEW TAB STYLES - Add these to the end of your theme_light.css */
+
+/* Target the tab list container */
+.stTabs [data-baseweb="tab-list"] {
+    flex-wrap: nowrap; /* Prevent tabs from wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling if content is too wide */
+    gap: 8px; /* Space between tabs */
+    border-bottom: 2px solid #D9D9D9; /* A subtle line under tabs */
+}
+
+/* Target individual tab buttons */
+.stTabs [data-baseweb="tab"] {
+    min-width: 280px; /* Adjust this value to fit your longest tab title comfortably */
+    height: 55px; /* Adjust tab height if needed */
+    margin: 0;
+    padding: 10px 20px; /* Adjust padding to give more space around text */
+    background-color: #F0F2F6; /* Light background, similar to your sidebar */
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #D9D9D9; /* Soft border */
+    border-bottom: none; /* No bottom border for unselected tabs */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03); /* Subtle shadow */
+    transition: all 0.2s ease-in-out;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    font-size: 1.05em; /* Slightly larger font */
+    font-weight: 600; /* Bolder text */
+    white-space: nowrap; /* Prevent text from wrapping within the tab */
+    color: #262730; /* Use your theme's text color */
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: #E6E8EB; /* Slightly darker on hover */
+    cursor: pointer;
+}
+
+/* Style for the selected tab */
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background-color: #6C2EB8; /* Your haaz-purple for selected tab */
+    color: #FFFFFF; /* White text for selected tab */
+    border-color: #6C2EB8; /* Matching border color */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px; /* Visual adjustment for selected state */
+}
+
+/* Style for the tab content area */
+.stTabs [data-baseweb="tab-panel"] {
+    padding: 20px;
+    border: 1px solid #D9D9D9;
+    border-top: none; /* No top border to visually connect to the selected tab */
+    border-radius: 0 0 8px 8px;
+    background-color: #FFFFFF; /* Your theme's background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Shadow for the content area */
+}

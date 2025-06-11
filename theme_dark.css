@@ -1,0 +1,177 @@
+/* Existing theme_dark.css content */
+body, .stApp {
+    background-color: #18191A !important;
+    color: #E4E6EB !important;
+}
+
+/* Sidebar background */
+section[data-testid="stSidebar"] {
+    background-color: #242526 !important;
+}
+
+/* Sidebar headers and all headings */
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] h4,
+section[data-testid="stSidebar"] h5,
+section[data-testid="stSidebar"] h6,
+section[data-testid="stSidebar"] .stMarkdown,
+section[data-testid="stSidebar"] .stHeader,
+section[data-testid="stSidebar"] .stSubheader,
+section[data-testid="stSidebar"] .stTitle {
+    color: #E4E6EB !important;
+}
+
+/* Sidebar widget labels */
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] .stTextInput label,
+section[data-testid="stSidebar"] .stSelectbox label {
+    color: #E4E6EB !important;
+    font-weight: 600 !important;
+}
+
+/* Main area headers and labels */
+.stMarkdown, .stSubheader, .stHeader, .stTitle,
+label, .stTextInput label, .stSelectbox label {
+    color: #E4E6EB !important;
+}
+
+/* Input fields */
+.stTextInput input,
+.stTextInput textarea {
+    background: #242526 !important;
+    color: #E4E6EB !important;
+}
+
+/* Buttons */
+/* .stButton>button {
+    background: #3A3B3C !important;
+    color: #E4E6EB !important;
+} */
+.se-purple-info {
+    color: #6C2EB8 !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 1em 0;
+}
+
+/* Index PDFs button in sidebar */
+section[data-testid="stSidebar"] button[kind="secondary"] {
+    background-color: #6C2EB8 !important; /* Siemens Energy purple */
+    color: #fff !important;
+    border: none !important;
+    font-weight: 600;
+}
+section[data-testid="stSidebar"] button[kind="secondary"]:hover {
+    background-color: #4B1D7A !important; /* darker purple on hover */
+    color: #fff !important;
+}
+
+/* Theme selectbox in sidebar */
+section[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] > div {
+    background-color: #242526 !important;
+    color: #E4E6EB !important;
+    border: 1.5px solid #6C2EB8 !important;
+    border-radius: 6px !important;
+}
+section[data-testid="stSidebar"] .stSelectbox span {
+    color: #E4E6EB !important;
+}
+section[data-testid="stSidebar"] .stSelectbox [data-baseweb="popover"] {
+    background-color: #242526 !important;
+    color: #E4E6EB !important;
+    border: 1.5px solid #6C2EB8 !important;
+}
+section[data-testid="stSidebar"] .stSelectbox [data-baseweb="option"] {
+    background-color: #242526 !important;
+    color: #E4E6EB !important;
+}
+
+.haaz-green {
+    color: #00FFC8 !important;  /* Siemens Energy Green */
+    font-weight: 800;
+}
+.haaz-purple {
+    color: #6C2EB8 !important;  /* Siemens Energy Purple */
+    font-weight: 800;
+}
+
+/* App header background and text color for dark theme */
+header[data-testid="stHeader"] {
+    background: #18191A !important;
+}
+
+header[data-testid="stHeader"] .stHeader {
+    color: #E4E6EB !important;
+}
+
+/* Remove box-shadow if you want a flat look */
+header[data-testid="stHeader"] {
+    box-shadow: none !important;
+}
+
+button {
+    background-color: #6C2EB8 !important;
+    color: #fff !important;
+    border: none !important;
+    font-weight: 600;
+}
+button:hover {
+    background-color: #4B1D7A !important;
+    color: #fff !important;
+}
+
+/* NEW TAB STYLES FOR DARK THEME - Add these to the end of your theme_dark.css */
+
+/* Target the tab list container */
+.stTabs [data-baseweb="tab-list"] {
+    flex-wrap: nowrap; /* Prevent tabs from wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling if content is too wide */
+    gap: 8px; /* Space between tabs */
+    border-bottom: 2px solid #3A3B3C; /* A subtle line under tabs, dark grey */
+}
+
+/* Target individual tab buttons */
+.stTabs [data-baseweb="tab"] {
+    min-width: 280px; /* Adjust this value to fit your longest tab title comfortably */
+    height: 55px; /* Adjust tab height if needed */
+    margin: 0;
+    padding: 10px 20px; /* Adjust padding to give more space around text */
+    background-color: #242526; /* Darker background, similar to your sidebar */
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #3A3B3C; /* Soft dark border */
+    border-bottom: none; /* No bottom border for unselected tabs */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.2s ease-in-out;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    font-size: 1.05em; /* Slightly larger font */
+    font-weight: 600; /* Bolder text */
+    white-space: nowrap; /* Prevent text from wrapping within the tab */
+    color: #E4E6EB; /* Use your theme's text color */
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: #3A3B3C; /* Slightly lighter dark on hover */
+    cursor: pointer;
+}
+
+/* Style for the selected tab */
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background-color: #6C2EB8; /* Your haaz-purple for selected tab */
+    color: #FFFFFF; /* White text for selected tab */
+    border-color: #6C2EB8; /* Matching border color */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px; /* Visual adjustment for selected state */
+}
+
+/* Style for the tab content area */
+.stTabs [data-baseweb="tab-panel"] {
+    padding: 20px;
+    border: 1px solid #3A3B3C;
+    border-top: none; /* No top border to visually connect to the selected tab */
+    border-radius: 0 0 8px 8px;
+    background-color: #18191A; /* Your theme's main background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Shadow for the content area */
+}
